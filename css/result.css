@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #FAF1BE;
+    color : #000;
+    font-family: "NEXON Lv1 Gothic OTF";
+}
+
+button {
+    font-family: "Nexon Lv1 Gothic OTF";
+    font-size: 20px;
+    width: 400px;
+    height: 50px;
+    padding: 5px;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #fff ; /*!important 이거 쓰면 우선순위 */
+    color: #000;
+}
+
+#main_contents{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+}
+
+#main_contents .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    padding-bottom: 50px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.result h1{
+    font-size: 50px;
+    font-family: "GmarketSansBold";
+}
+
+.result h3{
+    font-size: 17px;
+    padding-bottom: 15px; 
+}
+
+.result_img{
+    width: 300px;
+    height: 324px;
+} /*부모 div 태그의 넓이를 정해줌*/
+
+.result_img img{ /*정해진 부모 태그의 넓이를 따라감*/
+    width: 100%;
+    height: 100%;
+}
+
+.result_explains {
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+    line-height: 1.5;
+}
+
+.result_explains .explain{
+    width: 400px;
+    margin-bottom: 30px; /* 블럭들끼리 띄워지게 함 */
+}
+
+.result_explains .title{
+    font-family: "GmarketSansBold";
+    font-size: 20px;
+    text-align: center;
+    border-top: 3px solid #EA7E7C;
+    border-bottom: 3px solid #EA7E7C;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+}
+
+.result_explains ul {
+    padding: 0 20px;
+    list-style-type: disc; /*목록 앞의 마커를 정하는 속성*/
+}
+
+.result_explains li{
+    padding-bottom: 15px;
+}
+
+.lectures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid #EA7E7C;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+
+}
+
+.lectures .title {
+    text-align: center;
+    width: 400px;
+    font-size: 30px;
+    font-family: "GmarketSansBold";
+    color: #EA7E7C;
+    position: relative; /* relative를 주게 되면 해당 태그가 기준이 됨, 자식들이 absolute라면, relative 부모를 기준으로 따라감, 이것은 중앙에 선을 긋기 위한 것! */
+}
+
+.lectures .title:before, .lectures .title:after{
+    content: '';
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: #EA7E7C;
+    position: absolute;
+    /*너비가 120픽셀, 높이가 3픽셀인 박스를 만듬*/
+}
+
+/*그 박스들을 좌우에 배치*/
+.lectures .title:before{
+    left: 0;
+    top: 50%;
+}
+.lectures .title:after{
+    right: 0;
+    top: 50%;
+}
+
+.lectures p{
+    padding: 50px 0;
+    line-height: 1.5;
+}
+
+.lectures ul{
+    width: 400px;
+}
+
+.lectures li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.lectures a{
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden; /*커져도 a태그 이상으로 커지지 않음*/
+}
+
+.lectures a:hover img{
+    transform: scale(1.05);
+}
+
+.lectures a:hover button{
+    text-decoration: underline;
+}
+
+.lectures li img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    transition: transform .5s;
+}
+.lectures li h3 {
+    font-family: "GmarketSansBold";
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 10px 20px;
+}
+
+.lectures lis button{
+    background-color: #7F47DD;
+    color: #fff;
+}
+
+button:hover{
+    text-decoration: underline;
+}
+
+.share {
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #EA7E7C;
+}
+
+.share button {
+    margin-bottom: 30px;
+}
+
+.facebook_share {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+.kakao_share{
+    background-color: #f1d900;
+}
+
+.buttons {
+    padding-bottom: 50px;
+}
+
+.buttons h3 {
+    padding-bottom: 20px;
+}
+
+.buttons button {
+    margin-bottom: 30px;
+}
+
+.color {
+    background-color: #7F47DD;
+    color : #fff;
+}
+
+.weniv {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.weinv a{
+    width : 100px; /*이미지를 감싼 태그*/
+}
+
+.weniv img {
+    width: 100%;
+    height: auto;
+}
+
+.weniv p {
+    padding-top: 20px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 1.5;
+}

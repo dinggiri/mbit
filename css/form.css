@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #FAF1BE;
+    color : #000;
+    font-family: "NEXON Lv1 Gothic OTF";
+    overflow: hidden; /*scroll을 없앰, 다음으로 넘어가는건 js에서*/
+}
+
+#survey /* 섹션이 하나이기 때문에 id 사용 */ {
+    display: flex;
+    justify-content: center;
+    width: 100vw; /*vw는 전체 보여주는 페이지에서의 할당량*/
+    height: 100vh;
+    margin-top: 50px;
+}
+
+.test { 
+    max-width: 600px;
+    height: 100vh; /* test class를 가지고 있는 하나의 설문지가 하나의 높이를 전부 잡아먹게 한 다음에 다음 버튼을 눌렀을 때 새 설문지가 나오게 하려고*/
+}
+
+.question_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    line-height: 1.3;
+    padding-bottom: 30px;
+}
+
+.question_container .number{
+    padding-bottom: 30px;
+}
+
+.question_container .question{
+    font-family: "GmarketSansBold";
+}
+
+.answer {
+    font-size: 17px;
+    line-height: 1.3;
+    padding-bottom: 30px;
+}
+
+.answer div{
+    padding-bottom : 15px;
+}
+
+.answer input{
+    cursor : pointer;
+}
+
+
+.btn_wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.btn_sort{ /*두개 이상의 요소 -> space between을 주면 간격 동일*/
+    justify-content: space-between;
+}
+
+button, .submit_btn {
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    border-style: none;
+    border-radius: 10px;
+    font-family: "Nexon Lv1 Gothic OTF";
+    font-size: 20px;
+    background-color: #7F47DD;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover, .submit_btn:hover {
+    color : #7F47DD;
+    background-color: #fff;
+}
